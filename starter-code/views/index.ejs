@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="./chart.js/dist/Chart.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
   </head>
   <body>
     <h1><%= title %></h1>
@@ -17,7 +18,7 @@ var myChart = new Chart(ctx, {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [{
             label: 'Bitcoin Price Index',
-            data: [12, 19, 3, 5, 2, 3],
+            data: response,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
